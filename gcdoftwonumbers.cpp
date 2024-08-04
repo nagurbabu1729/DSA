@@ -12,20 +12,23 @@ int main(){
 
     cout<<"enter the number2:";
     cin>>number2;
-
-    if(number1==0){
+    
+    if(number1==0 and number2==0){
+        cout<<"gcd is undefined";
+    }
+    else if(number1==0){
         cout<<number2;
     }
-
-    if(number2==0){
+    else if(number2==0){
         cout<<number1;
     }
-
-    for(int i=min(number1,number2);;i--){
+    else{
+        for(int i=min(number1,number2);i>0;i--){
         if(number1%i==0 and number2%i==0){
             cout<<i;
             break;
         }
+    }
     }
 
     return 0;
