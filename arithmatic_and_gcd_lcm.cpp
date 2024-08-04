@@ -59,7 +59,12 @@ int main(){
             }
             break;
         case 5:
-            cout<<"modular_division:"<<number1%number2<<endl;
+            if(number2==0){
+                cout<<"m_division is not possible:"<<<endl;
+            }
+          else{
+              cout<<"modular_division:"<<number1%number2<<endl;
+          }
             break;
         case 6:
             if(number1==0 and number2==0){
@@ -88,7 +93,7 @@ int main(){
             else{
                 res=gcd(number1,number2);
                 lcm=(number1*number2)/res;
-                cout<<"lcm of two numbers:"<<res1<<endl;
+                cout<<"lcm of two numbers:"<<lcm<<endl;
             }
             break;
         case 8:
