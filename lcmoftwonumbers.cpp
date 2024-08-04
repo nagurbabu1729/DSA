@@ -20,11 +20,9 @@ int main(){
     }
 
     else{
-        for(int i=max(number1,number2);;i++){
-        if(i%number1==0 and i%number2==0){
-            cout<<i;
-            break;
-        }
+      
+       }
+       
     }
     }
     return 0;
