@@ -17,8 +17,6 @@ void gcd(int num1,int num2){
         cout<< "gcd is "  <<num1;
         return;
     }
-
-   else{
         int rem=num1%num2;
         while(rem!=0){
             num1=num2;
@@ -26,7 +24,6 @@ void gcd(int num1,int num2){
             rem=num1%num2;
         }
         cout << " gcd is "  <<num2;
-   }
 }
 
 int main(){
