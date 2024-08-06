@@ -31,7 +31,7 @@ void gcd(int num1,int num2){
 
 int main(){
 
-    int num1=0,num2=18;
+    int num1=12,num2=18;
     gcd(num1,num2);
     return 0;
 }

@@ -28,7 +28,7 @@ int gcd(int num1,int num2){
 
 int main(){
 
-    int num1=1,num2=0;
+    int num1=12,num2=18;
     int res=gcd(num1,num2);
     int lcm=(num1*num2)/res;
     cout<< "lcm is "<<lcm;
