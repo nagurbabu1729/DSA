@@ -8,12 +8,12 @@ void gcd(int num1,int num2){
         return;
     }
 
-    else if(num1==0){
+    if(num1==0){
         cout<< "gcd is"   <<num2;
         return;
     }
 
-    else if(num2==0){
+    if(num2==0){
         cout<< "gcd is "  <<num1;
         return;
     }
