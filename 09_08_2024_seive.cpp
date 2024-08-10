@@ -1,9 +1,10 @@
+// Online C++ compiler to run C++ program online
 #include<bits/stdc++.h>
 using namespace std;
 
 int main(){
 
-    int n=40;
+    int n=100;
     
     bool is_prime[n+1];
 
@@ -21,10 +22,19 @@ int main(){
             }
         }
     }
-
-    for(int i=0;i<=n;i++){
+    
+    cout<<"composite numbers:"<<"\n";
+    for(int i=20;i<=50;i++){
+        if(is_prime[i]==false){
+            cout<<i<<" "<<"\n";
+        }
+    }
+    
+    cout<<"prime numbers:"<<"\n";
+    for(int i=50;i<=100;i++){
         if(is_prime[i]){
             cout<<i<<" ";
         }
     }
+    return 0;
 }
