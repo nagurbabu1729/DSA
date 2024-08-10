@@ -15,9 +15,9 @@ int main(){
     is_prime[0]=false;
     is_prime[1]=false;
 
-    for(int i=2;i<=n;i++){
+    for(int i=2,s=sqrt(n);i<=s;i++){
         if(is_prime[i]==true){
-            for(int j=i+i;j<=n;j=j+i){
+            for(int j=i*i;j<=n;j=j+i){
                 is_prime[j]=false;
             }
         }
