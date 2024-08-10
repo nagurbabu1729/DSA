@@ -1,22 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void f(int nums[],int size){
-    for(int i=0;i<size;i++){
-        cout<<nums[i]<< " ";
-    } 
-
-   // cout<<nums[0]<<"\n";
-   // cout<<nums[1]<<"\n";
-}
-
 int main(){
 
-    int nums[]={12,26,38,30,90};
+    int a=45;
 
-    int size=sizeof(nums)/sizeof(nums[3]);
+    int* ptr=&a;
 
-    cout<<"size of nums is:" <<size<<"\n";
+    cout<<"a value:" << a<<endl;
+    cout<<"address of a(&a):" << &a<<endl;
+    cout<<"what is in ptr:" <<ptr<<endl;
+    cout<<"ptr address(&ptr):"  <<&ptr<<endl;
+    cout<<"accessing a value by pointer using (* before pointer variable):" << *ptr<<endl;
+    //cout<<"it gives error value:"<< *a;
 
-    f(nums,size);
+    if(ptr==&a){
+       cout<<"two address are same";
+    }
+    else{
+        cout<<"two address are not same";
+    }
 }
