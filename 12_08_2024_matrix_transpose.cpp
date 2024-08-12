@@ -9,7 +9,7 @@ int main(){
     for(int i=0;i<nums.size();i++){
         for(int j=i;j<nums[i].size();j++){
             if(nums[i]!=nums[j]){
-                 cout<<nums[j][i]=nums[i][j];
+                 cout<<nums[i][j]=nums[j][i];
             }
         }
     }
