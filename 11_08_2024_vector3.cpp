@@ -1,21 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+static bool compare(pair<int,pair<int,int>>a, pair<int,pair<int,int>> b){
+    if(a.second.second>b.second.second){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
 int main(){
-
+  
     
+    vector<pair<int,pair<int,int>>> nums { {12,{99,45}}, {8,{9,12}}, {2,{43,20}}, {66,{12,89}}  };
+     
+    //changing index 2 values 
+    nums[2]={12,{13,14}};
 
-    int n=4;
+    cout<<"before sort:"<<"\n";
+    for(auto&tr:nums){
+     cout<<tr.first<<" "<<tr.second.first<<" "<<tr.second.second<<"\n";
+   }
 
-    vector<pair<int,pair<int,int>>>nums(n);
-    nums.push_back({12,{99,45}});
-    nums.push_back({55,{8,9}});
-    nums.push_back({12,{2,43}});
-    nums.push_back({55,{66,12}});
-    
    
-    cout<<nums[1].first;
-    
-    //return 0;
+    sort(nums.begin(),nums.end(),compare);
+
+    cout<<"after sort:"<<"\n";
+    for(auto&tr:nums){
+     cout<<tr.first<<" "<<tr.second.first<<" "<<tr.second.second<<"\n";
+   }
+
 
 }
