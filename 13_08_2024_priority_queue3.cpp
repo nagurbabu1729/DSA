@@ -3,32 +3,32 @@ using namespace std;
 
 
 
-struct School{
+struct Human{
 
     int id;
     string name;
     string skin_color;
     int height;
-};
 
-struct Compare{
-    bool operator()(School s1,School s2){
-        return s1.skin_color>s2.skin_color;
-    }
 };
-
 
 int main(){
 
-    priority_queue<School,vector<School>,Compare> pq;
+    unordered_map<string,int>mp{{"golden",3},{"red",2},{"black",1}};
 
-    pq.push({10,"nagur","red",165});
-    pq.push({20,"akash","blue",175});
-    pq.push({13,"vasanth","white",160});
-    pq.push({19,"shivam","black",174});
-    pq.push({27,"fahad","golden",170});
-    pq.push({60,"faran","violet",184});
+    auto compare=[&mp](const Human& h1,const Human& h2){
+        return mp[h1.skin_color]<mp[h2.skin_color];
+    };
 
-    cout<<pq.top().skin_color;
+    priority_queue<Human*,vector<Human*>,decltype(compare)> pq(compare);
+
+    pq.push({10,"nagur","golden",165});
+    pq.push({20,"akash","red",175});
+    pq.push({13,"vasanth","black",160});
+
+    while(!pq.empty()){
+        cout<<pq.top().name<<"\n";
+        pq.pop();
+    }
 
 }
