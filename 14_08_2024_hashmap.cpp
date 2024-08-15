@@ -2,6 +2,7 @@
 using namespace std;
 
 class Human{
+
     public:
         int id;
         string name;
@@ -19,12 +20,12 @@ int main(){
 
     unordered_map<int,string> mp{{1000,"ferrari"},{800,"alto"},{800,"omni"}};
 
-    auto compare=[&mp](const Human& h1,Human& h2){
-        return mp[h1.car]<mp[h2.car];
+    auto compare=[&mp](const Human& h1,const Human& h2){
+        return mp[0]<mp[0];
 
     };
     
-    priority_queue<Human*,vector<Human*>,decltype(compare)>pq(compare);
+    priority_queue<Human&,vector<Human&>,decltype(compare)>pq(compare);
 
     pq.push(new Human(2,"akash","alto"));
     pq.push(new Human(3,"vasanth","omni"));
