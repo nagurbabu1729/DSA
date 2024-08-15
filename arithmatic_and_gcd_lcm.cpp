@@ -21,6 +21,7 @@ int main(){
     // for lcm
     int lcm;
 
+    
     int choice;
     while(choice!=8){
         cout<<"1.Addition\n2.Subtraction\n3.multiplication\n4.Division\n5.modularDivision\n6.gcd\n7.lcm\n8.exit"<<endl;
