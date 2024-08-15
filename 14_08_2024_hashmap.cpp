@@ -1,37 +1,34 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Human{
-
-    public:
-        int id;
-        string name;
-        string car;
-
-    Human(int _id,string _name,string _car){
-        id=_id;
-        name=_name;
-        car=_car;
-    }
-
+struct Human {
+    int id;
+    string name;
+    string car;
 };
 
-int main(){
+int main() {
+    unordered_map<string, int> mp{{"ferrari", 1000}, {"alto", 800}, {"omni", 800}};
 
-    unordered_map<int,string> mp{{1000,"ferrari"},{800,"alto"},{800,"omni"}};
-
-    auto compare=[&mp](const Human& h1,const Human& h2){
-        return mp[0]<mp[0];
-
+    auto compare = [&mp](Human* h1, Human* h2) {
+        if (mp[h1->car] > mp[h2->car]) {
+            return true;
+        } else if (mp[h1->car] < mp[h2->car]) {
+            return false;
+        } else {
+            return h1->car > h2->car;
+        }
+        
     };
-    
-    priority_queue<Human&,vector<Human&>,decltype(compare)>pq(compare);
 
-    pq.push(new Human(2,"akash","alto"));
-    pq.push(new Human(3,"vasanth","omni"));
-    pq.push(new Human(1,"nagur","ferrari"));
+    priority_queue<Human*, vector<Human*>, decltype(compare)> pq(compare);
 
+    pq.push(new Human{10, "nagur", "ferrari"});
+    pq.push(new Human{20, "akash", "alto"});
+    pq.push(new Human{13, "vasanth", "omni"});
 
-    cout<<pq.top()->name;
-    
+    while (!pq.empty()) {
+        cout << pq.top()->name << "\n";
+        pq.pop();
+    }
 }
