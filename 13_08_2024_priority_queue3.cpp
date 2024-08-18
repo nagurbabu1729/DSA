@@ -1,15 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-
 struct Human{
 
     int id;
     string name;
     string skin_color;
     int height;
-
 };
 
 int main(){
@@ -30,5 +27,5 @@ int main(){
         cout<<pq.top().name<<"\n";
         pq.pop();
     }
-
+    
 }
