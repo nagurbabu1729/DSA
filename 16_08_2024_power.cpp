@@ -11,7 +11,7 @@ int main(){
     cout<<"enter the n value:"<<"\n";
     cin>>n;
 
-    int res=1;
+    double res=1.0;
 
     bool negative=(n<0)?true:false;
 
