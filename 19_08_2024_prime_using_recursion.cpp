@@ -25,10 +25,8 @@ int main(){
     cout<<"enter the number:";
     cin>>n;
 
-    int d;
-    cout<<"enter the number:";
-    cin>>d;
-
+    int d=2;
+    
     if(is_prime(n,d)){
         cout<<"prime";
     }
